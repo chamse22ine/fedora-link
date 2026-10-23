@@ -1,0 +1,33 @@
+[workspace]
+resolver = "2"
+members = ["crates/core", "crates/daemon", "crates/gui"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+rust-version = "1.80"
+
+[workspace.dependencies]
+anyhow = "1"
+thiserror = "2"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "io-util", "io-std", "time", "sync", "signal", "process"] }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std", "tls12", "logging"] }
+tokio-rustls = { version = "0.26", default-features = false, features = ["ring", "tls12", "logging"] }
+rcgen = { version = "0.13", default-features = false, features = ["ring", "pem"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+sha2 = "0.10"
+hex = "0.4"
+uuid = { version = "1", features = ["v4"] }
+x509-parser = "0.16"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+dirs = "5"
+zbus = { version = "5", default-features = false, features = ["tokio"] }
+notify-rust = "4"
+base64 = "0.22"
+ashpd = { version = "0.13", default-features = false, features = ["tokio", "remote_desktop", "screencast"] }
+futures-util = { version = "0.3", default-features = false }
+libc = "0.2"

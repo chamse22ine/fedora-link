@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.fedoralink.Gui</id>
+  <name>Fedora Link</name>
+  <summary>Reliez votre téléphone Android à Fedora</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <description>
+    <p>Fedora Link relie un téléphone Android à votre PC Fedora via le protocole KDE Connect : notifications, batterie, presse-papiers partagé, échange de fichiers, sonnerie du téléphone et recopie d'écran.</p>
+    <p>Aucune donnée ne quitte votre réseau local.</p>
+  </description>
+  <url type="homepage">https://github.com/chamse22ine/fedora-link</url>
+  <developer id="io.github.chamse22ine"><name>chamse22ine</name></developer>
+  <launchable type="desktop-id">org.fedoralink.Gui.desktop</launchable>
+  <provides><binary>fedora-link</binary><binary>fedora-linkd</binary></provides>
+  <content_rating type="oars-1.1"/>
+  <releases><release version="0.1.0" date="2026-10-21"/></releases>
+</component>

@@ -1,0 +1,125 @@
+/* Fedora Link — direction « expressive ». La palette (@fl_*) est injectée par theme.rs. */
+
+window.fl-window,
+.fl-page { background-color: @fl_bg; color: @fl_fg; }
+
+/* ---- barres d'en-tête ---- */
+headerbar.fl-header { background: none; box-shadow: none; border: none; color: @fl_fg; }
+.fl-sidebar { background-color: @fl_sidebar; }
+.fl-sidebar-title { font-weight: 800; font-size: 15px; }
+
+/* ---- barre latérale ---- */
+list.fl-nav { background: none; padding: 8px; }
+list.fl-nav > row {
+  min-height: 44px; padding: 0 14px; margin-bottom: 4px;
+  border-radius: 22px; background: none; color: @fl_fg;
+}
+list.fl-nav > row:hover { background-color: alpha(@fl_fg, 0.07); }
+list.fl-nav > row:selected { background-color: @fl_accent_soft; color: @fl_accent_fg; font-weight: 700; }
+list.fl-nav > row.soon { color: @fl_dim; }
+list.fl-nav > row.soon:hover { background: none; }
+.fl-badge {
+  background-color: @fl_accent; color: #ffffff; border-radius: 10px;
+  min-width: 20px; min-height: 20px; padding: 0 6px; font-size: 11px; font-weight: 700;
+}
+.fl-soon-tag {
+  background-color: @fl_btn_grey; color: @fl_dim; border-radius: 10px;
+  padding: 1px 8px; font-size: 11px; font-weight: 600;
+}
+
+/* ---- cartes, pastilles, boutons ---- */
+.fl-card { background-color: @fl_card; border: 1px solid @fl_border; border-radius: 16px; }
+.fl-card separator { background-color: @fl_border; min-height: 1px; }
+.fl-section-title { font-size: 15px; font-weight: 700; }
+.fl-dim { color: @fl_dim; }
+
+.fl-bubble {
+  min-width: 44px; min-height: 44px; border-radius: 22px;
+  background-color: @fl_accent_soft; color: @fl_accent_fg;
+}
+.fl-bubble.small { min-width: 32px; min-height: 32px; border-radius: 16px; }
+.fl-bubble.grey { background-color: @fl_btn_grey; color: @fl_fg; }
+
+button.fl-tile {
+  background-color: @fl_card; border: 1px solid @fl_border; border-radius: 16px;
+  padding: 16px 10px; min-height: 44px; box-shadow: none; color: @fl_fg;
+}
+button.fl-tile:hover { background-color: mix(@fl_card, @fl_accent_soft, 0.5); }
+button.fl-tile:disabled { opacity: 0.5; }
+.fl-tile-label { font-size: 13px; font-weight: 600; }
+
+button.fl-link {
+  background: none; box-shadow: none; border: none; color: @fl_accent_fg;
+  font-weight: 600; min-height: 44px; padding: 0 8px;
+}
+button.fl-link:hover { background-color: @fl_accent_soft; }
+button.fl-round {
+  min-width: 44px; min-height: 44px; padding: 0; border-radius: 22px;
+  background-color: @fl_btn_grey; color: @fl_fg; box-shadow: none;
+}
+button.fl-round:hover { background-color: @fl_accent_soft; }
+button.fl-grey {
+  background-color: @fl_btn_grey; color: @fl_fg; box-shadow: none;
+  border-radius: 22px; min-height: 44px; padding: 0 18px; font-weight: 600;
+}
+button.pill { min-height: 44px; padding: 0 18px; border-radius: 22px; }
+
+/* ---- bandeau du téléphone ---- */
+.fl-hero { background-color: @fl_banner; color: @fl_banner_ink; border-radius: 20px; padding: 28px; }
+.fl-hero-art, .fl-hero-ring { color: @fl_banner_ink; }
+.fl-hero-status { font-size: 13px; font-weight: 700; }
+.fl-hero-name { font-size: 32px; font-weight: 800; letter-spacing: -0.02em; }
+.fl-hero-sub { font-size: 14px; opacity: 0.85; }
+.fl-dot { min-width: 8px; min-height: 8px; border-radius: 4px; background-color: @fl_dim; }
+.fl-dot.online { background-color: @fl_connected; }
+.fl-ring-pct { font-size: 22px; font-weight: 800; }
+.fl-ring-sub { font-size: 11px; }
+
+/* ---- lecteur multimédia ---- */
+.player-card {
+  background-color: #1c3a5e; color: #ffffff; border-radius: 24px; padding: 28px;
+  transition: background-color 300ms ease;
+}
+.player-card label { color: #ffffff; }
+.player-cover-shadow { border-radius: 16px; box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28); }
+.player-cover { border-radius: 16px; background-color: rgba(255, 255, 255, 0.15); }
+.player-source { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; opacity: 0.85; }
+.player-title { font-size: 30px; font-weight: 800; }
+.player-sub { font-size: 15px; opacity: 0.85; }
+.player-time { font-size: 12px; opacity: 0.85; }
+progressbar.player-progress trough { min-height: 6px; border-radius: 3px; background-color: rgba(255, 255, 255, 0.25); }
+progressbar.player-progress progress { min-height: 6px; border-radius: 3px; background-color: #ffffff; }
+.player-card button { box-shadow: none; border: none; }
+.player-card button.player-skip {
+  min-width: 48px; min-height: 48px; padding: 0; border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.14); color: #ffffff;
+}
+.player-card button.player-skip:hover { background-color: rgba(255, 255, 255, 0.24); }
+.player-card button.player-play {
+  min-width: 64px; min-height: 64px; padding: 0; border-radius: 32px;
+  background-color: #ffffff; color: #1c3a5e; transition: color 300ms ease;
+}
+.player-card scale { color: #ffffff; }
+.player-card scale trough { background-color: rgba(255, 255, 255, 0.25); }
+.player-card scale highlight { background-color: #ffffff; }
+.player-card scale slider { background-color: #ffffff; border-color: #ffffff; }
+.fl-thumb { min-width: 48px; min-height: 48px; border-radius: 10px; background-color: @fl_accent_soft; color: @fl_accent_fg; }
+
+/* ---- listes libadwaita (Fichiers, Écran, Paramètres) au même style ---- */
+list.boxed-list {
+  background-color: @fl_card; border: 1px solid @fl_border; border-radius: 16px; box-shadow: none;
+}
+list.boxed-list > row { background: none; }
+preferencesgroup > box > box > label.heading, preferencesgroup .title { font-weight: 700; }
+
+/* ---- pointeur de présentation ---- */
+window.fl-overlay { background: transparent; }
+
+/* ---- messages (SMS) ---- */
+.fl-msg { border-radius: 18px; padding: 8px 14px; }
+.fl-msg.in { background-color: @fl_card; border: 1px solid @fl_border; }
+.fl-msg.out { background-color: @fl_accent; color: #ffffff; }
+.fl-msg.out label { color: #ffffff; }
+.fl-msg.pending { opacity: 0.55; }
+.fl-msg-image { border-radius: 14px; }
+entry.fl-msg-entry { min-height: 44px; border-radius: 22px; padding: 0 16px; }

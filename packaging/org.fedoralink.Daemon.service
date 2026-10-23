@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.fedoralink.Daemon
+Exec=/usr/bin/fedora-linkd
+SystemdService=fedora-link.service

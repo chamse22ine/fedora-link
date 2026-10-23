@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Fedora Link</short>
+  <description>Liaison PC / téléphone Android (protocole KDE Connect) : découverte, notifications, fichiers.</description>
+  <port protocol="tcp" port="1714-1764"/>
+  <port protocol="udp" port="1714-1764"/>
+</service>

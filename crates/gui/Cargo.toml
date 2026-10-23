@@ -1,0 +1,19 @@
+[package]
+name = "fedora-link-gui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "fedora-link"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+gtk4 = { version = "0.11.5", features = ["v4_12"] }
+image = { version = "0.25.10", default-features = false, features = ["jpeg", "png"] }
+libadwaita = { version = "0.9.2", features = ["v1_6"] }
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true

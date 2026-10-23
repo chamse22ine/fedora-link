@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Fedora Link
+GenericName=Liaison avec le téléphone
+Comment=Notifications, fichiers et écran de votre téléphone Android
+Exec=fedora-link
+Icon=org.fedoralink.Gui
+Terminal=false
+Categories=GNOME;GTK;Utility;
+Keywords=téléphone;android;notifications;kdeconnect;sms;
+StartupNotify=true

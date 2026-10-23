@@ -1,0 +1,14 @@
+[Unit]
+Description=Fedora Link — liaison avec le téléphone
+Documentation=https://github.com/chamse22ine/fedora-link
+After=network-online.target
+
+[Service]
+Type=dbus
+BusName=org.fedoralink.Daemon
+ExecStart=/usr/bin/fedora-linkd
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target
